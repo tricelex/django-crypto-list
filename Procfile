@@ -1,1 +1,1 @@
-web: gunicorn dtbot.wsgi
+web: gunicorn crypto_list.wsgi
