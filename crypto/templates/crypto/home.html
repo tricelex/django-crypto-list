@@ -9,30 +9,33 @@
         <p>Your source for Crypto Information</p>
     </div>
 
-    <table class="table table-striped table-bordered table-hover">
-        <thead>
-        <tr>
-            <th scope="col">Name:</th>
-            <th scope="col">Price:</th>
-            <th scope="col">Daily High:</th>
-            <th scope="col">Daily Low:</th>
-            <th scope="col">MarketC ap</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for key, value in price.DISPLAY.items %}
-
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
             <tr>
-                <td>{{ key }}</td>
-                <td>{{ value.USD.PRICE }}</td>
-                <td>{{ value.USD.HIGHDAY }}</td>
-                <td>{{ value.USD.LOWDAY }}</td>
-                <td>{{ value.USD.MKTCAP }}</td>
+                <th scope="col">Name:</th>
+                <th scope="col">Price:</th>
+                <th scope="col">Daily High:</th>
+                <th scope="col">Daily Low:</th>
+                <th scope="col">MarketC ap</th>
             </tr>
-        {% endfor %}
-        </tbody>
+            </thead>
+            <tbody>
+            {% for key, value in price.DISPLAY.items %}
 
-    </table>
+                <tr>
+                    <td>{{ key }}</td>
+                    <td>{{ value.USD.PRICE }}</td>
+                    <td>{{ value.USD.HIGHDAY }}</td>
+                    <td>{{ value.USD.LOWDAY }}</td>
+                    <td>{{ value.USD.MKTCAP }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+
 
 
 
